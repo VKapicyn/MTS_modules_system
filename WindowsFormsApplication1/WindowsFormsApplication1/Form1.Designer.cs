@@ -164,7 +164,7 @@
             // portfolioToolStripMenuItem
             // 
             this.portfolioToolStripMenuItem.Name = "portfolioToolStripMenuItem";
-            this.portfolioToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.portfolioToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.portfolioToolStripMenuItem.Text = "Portfolio";
             this.portfolioToolStripMenuItem.Click += new System.EventHandler(this.portfolioToolStripMenuItem_Click);
             // 
@@ -179,15 +179,21 @@
             // 
             // modeToolStripMenuItem
             // 
+            this.modeToolStripMenuItem.Checked = true;
+            this.modeToolStripMenuItem.CheckOnClick = true;
+            this.modeToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.modeToolStripMenuItem.Name = "modeToolStripMenuItem";
-            this.modeToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.modeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.modeToolStripMenuItem.Text = "MTS";
+            this.modeToolStripMenuItem.CheckedChanged += new System.EventHandler(this.modeToolStripMenuItem_CheckedChanged);
             // 
             // testsToolStripMenuItem
             // 
+            this.testsToolStripMenuItem.CheckOnClick = true;
             this.testsToolStripMenuItem.Name = "testsToolStripMenuItem";
-            this.testsToolStripMenuItem.Size = new System.Drawing.Size(100, 22);
+            this.testsToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.testsToolStripMenuItem.Text = "Tests";
+            this.testsToolStripMenuItem.CheckedChanged += new System.EventHandler(this.testsToolStripMenuItem_CheckedChanged);
             // 
             // graToolStripMenuItem
             // 
@@ -223,8 +229,8 @@
             // toolStripStatusLabel3
             // 
             this.toolStripStatusLabel3.Name = "toolStripStatusLabel3";
-            this.toolStripStatusLabel3.Size = new System.Drawing.Size(62, 17);
-            this.toolStripStatusLabel3.Text = "Mod: MTS";
+            this.toolStripStatusLabel3.Size = new System.Drawing.Size(68, 17);
+            this.toolStripStatusLabel3.Text = "Mode: MTS";
             // 
             // listView1
             // 

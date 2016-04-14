@@ -33,10 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Atentis.Connection">
-      <HintPath>..\..\..\..\..\Desktop\Multi_Babloryb\Multi_Babloryb\bin\Debug\Atentis.Connection.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\Atentis.Connection.dll</HintPath>
     </Reference>
     <Reference Include="Atentis.History">
-      <HintPath>..\..\..\..\..\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\Atentis.History.dll</HintPath>
+      <HintPath>..\..\..\..\..\Downloads\Atentis.History.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

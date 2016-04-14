@@ -76,6 +76,32 @@ namespace WindowsFormsApplication1
 
         }
 
+        private void modeToolStripMenuItem_CheckedChanged(Object sender, EventArgs e)
+        {
+            if (modeToolStripMenuItem.Checked == true)
+            {
+                testsToolStripMenuItem.Checked = false;
+                toolStripStatusLabel3.Text = "Mode: MTS";
+            }
+            else
+            {
+                toolStripStatusLabel3.Text = "Mode: Testing";
+            }
+        }
+
+        private void testsToolStripMenuItem_CheckedChanged(Object sender, EventArgs e)
+        {
+            if (testsToolStripMenuItem.Checked == true)
+            {
+                modeToolStripMenuItem.Checked = false;
+                toolStripStatusLabel3.Text = "Mode: Testing";
+            }
+            else
+            {
+                toolStripStatusLabel3.Text = "Mode: MTS";
+            }
+        }
+
         private void Form1_Closing(object sender, FormClosingEventArgs e)
         {
             DateTime close_time = DateTime.Now;
@@ -116,6 +142,8 @@ namespace WindowsFormsApplication1
             strategyToolStripMenuItem.Enabled = false;
             settingsToolStripMenuItem.Enabled = false;
             graToolStripMenuItem.Enabled = false;
+
+            
         }
 
         private void button6_Click(object sender, EventArgs e)
