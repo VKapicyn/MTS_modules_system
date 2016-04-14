@@ -18,6 +18,16 @@ namespace WindowsFormsApplication1
             System.Windows.Forms.Control.CheckForIllegalCrossThreadCalls = false;
             InitializeComponent();
             InitEvents();
+            Connect();//сделать через фоновый поток
+        }
+
+        public void Connect()
+        {
+            Accounts.load();
+            foreach(var acc in Accounts.accounts)
+            {
+                acc.connect();
+            }
         }
 
         public void InitEvents()
@@ -93,21 +103,41 @@ namespace WindowsFormsApplication1
             dataGridView1.Rows.Add("first","10","-","B");
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Add("first", "10", "-", "S");
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             button6.Enabled = true;
             button5.Enabled = false;
+            аккаунтыToolStripMenuItem.Enabled = false;
+            strategyToolStripMenuItem.Enabled = false;
+            settingsToolStripMenuItem.Enabled = false;
+            graToolStripMenuItem.Enabled = false;
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             button6.Enabled = false;
             button5.Enabled = true;
+            аккаунтыToolStripMenuItem.Enabled = true;
+            strategyToolStripMenuItem.Enabled = true;
+            settingsToolStripMenuItem.Enabled = true;
+            graToolStripMenuItem.Enabled = true;
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void аккаунтыToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Add("first", "10", "-", "S");
+            Form2 form = new Form2();
+            form.Show();
+        }
+
+        private void portfolioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form_portfolio form = new Form_portfolio();
+            form.Show();
         }
 
     }

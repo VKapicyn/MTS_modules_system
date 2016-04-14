@@ -12,9 +12,16 @@ namespace WindowsFormsApplication1
     {
         #region propeties
 
+        public static List<Accounts> accounts = new List<Accounts>();
+
         #endregion
 
         #region Save/Upload
+
+        public static void load()
+        {
+        
+        }
 
         #endregion
 
